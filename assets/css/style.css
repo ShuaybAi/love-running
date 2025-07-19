@@ -18,7 +18,9 @@ body {
   font-family: "Lato", sans-serif;
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
   font-family: "Oswald", sans-serif;
   text-transform: uppercase;
   letter-spacing: 2px;
@@ -50,7 +52,7 @@ header a {
   list-style: none;
 }
 
-#menu > li {
+#menu>li {
   margin-bottom: 1em;
 }
 
@@ -76,11 +78,11 @@ nav {
 }
 
 #nav-toggle {
-    display: none;
+  display: none;
 }
 
 .nav-toggle-label {
-    font-size: 2rem;
+  font-size: 2rem;
 }
 
 /* Main content */
@@ -108,8 +110,9 @@ main {
   padding-left: 10px;
 }
 
-#cover-text > h2, #cover-text > h3{
-   color: white;
+#cover-text>h2,
+#cover-text>h3 {
+  color: white;
 }
 
 #reasons {
@@ -117,20 +120,19 @@ main {
   margin: 20px auto;
 }
 
-#reasons > h2 {
+#reasons>h2 {
   margin-bottom: 20px;
   text-align: center;
   font-size: 280%;
 }
 
-#benefits-physical > div, #benefits-mental > div {
+#benefits-physical>div,
+#benefits-mental>div {
   line-height: 20px;
   margin-bottom: 20px;
 }
 
 #benefits p {
-  /* padding-left: 20px; */
-  /* padding-right: 20px; */
   padding: 0 20px;
 }
 
@@ -156,12 +158,36 @@ main {
   justify-content: center;
 }
 
+#times {
+  background: url("../images/dublin-city.webp") no-repeat center / cover;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#times div {
+  color: #fafafa;
+  background-color: rgba(0, 0, 0, .6);
+  padding: 15px;
+  text-align: center;
+  /* This will not wrap on screens of less than 400px wide.
+  Each div will expand to fill the available spaceon its row */
+  flex-basis: 200px;  
+  flex-grow: 1;
+  /* Creates a grid of meetup times over the background image */
+  border: 2px solid white;
+}
+
+#times h3 {
+  /* Override the heading color set in general styles */
+  color: #fafafa;
+}
+
 /* Footer */
 #social-networks {
   text-align: center;
   padding: 20px 0;
   display: flex;
-  justify-content: space-evenly ;
+  justify-content: space-evenly;
   list-style: none;
 }
 
@@ -173,78 +199,83 @@ main {
 
 /* Media query: tablets and larger (768px and above) */
 @media screen and (min-width: 768px) {
-    /* Header */
-    nav {
-        display: block;
-        position: relative;
-        box-shadow: none;
-        width: fit-content;
-        padding-right: 1rem;
-    }
 
-    #menu {
-        display: flex;
-    }
+  /* Header */
+  nav {
+    display: block;
+    position: relative;
+    box-shadow: none;
+    width: fit-content;
+    padding-right: 1rem;
+  }
 
-    #menu > li {
-        padding-left: 1rem;
-    }
+  #menu {
+    display: flex;
+  }
 
-    .nav-toggle-label {
-         display: none;
-    }
-    
-    #logo {
-        font-size: 280%;
-        line-height: 75px;
-        margin: 0 0.5rem;
-    }
+  #menu>li {
+    padding-left: 1rem;
+  }
 
-    /* Main content */
-    main {
-        margin-top: 80px;
-    }
+  .nav-toggle-label {
+    display: none;
+  }
 
-    /* Hero */
-    #cover-text {
-      width: 300px;
-      right: 50px;
-    }
+  #logo {
+    font-size: 280%;
+    line-height: 75px;
+    margin: 0 0.5rem;
+  }
 
-    /* Reasons section */
-    #benefits-physical, #benefits-mental {
-      display: flex;
-      flex-direction: column;
-      width: 100%;
-    }
+  /* Main content */
+  main {
+    margin-top: 80px;
+  }
 
-    #benefits-physical > div, #benefits-mental > div {
-      width: 75%;
-    }
+  /* Hero */
+  #cover-text {
+    width: 300px;
+    right: 50px;
+  }
 
-    #benefits-mental > div {
-      text-align: end;
-      align-self: flex-end;
-    }
+  /* Reasons section */
+  #benefits-physical,
+  #benefits-mental {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  #benefits-physical>div,
+  #benefits-mental>div {
+    width: 75%;
+  }
+
+  #benefits-mental>div {
+    text-align: end;
+    align-self: flex-end;
+  }
 }
 
 /* Media query: laptops and larger (992px and above) */
 @media screen and (min-width: 992px) {
-    /* Header */
-    #menu a:hover {
-        border-bottom: 1px solid #3a3a3a;
-    }
+
+  /* Header */
+  #menu a:hover {
+    border-bottom: 1px solid #3a3a3a;
+  }
 }
 
 /* Media query: laptops of screens 1200px and wider */
 @media screen and (min-width: 1200px) {
+
   /* Reasons section */
   #benefits {
     display: flex;
     flex-direction: row;
   }
 
-  #benefits > div {
+  #benefits>div {
     flex: 1;
   }
 
@@ -252,11 +283,11 @@ main {
     order: 1;
   }
 
-  #benefits-mental > div {
+  #benefits-mental>div {
     align-self: flex-start;
   }
 
-  #benefits-physical > div {
+  #benefits-physical>div {
     align-self: flex-end;
   }
 }
